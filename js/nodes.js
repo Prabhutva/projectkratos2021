@@ -241,7 +241,7 @@ var nodesjs = new NodesJs({
     backgroundDuration: 4000,
 
     // the number of particles
-    number: window.hasOwnProperty('orientation') ? 80: 150,
+    number: window.hasOwnProperty('orientation') ? 30: 100,
 
     // animation speed
     speed: 150
