@@ -237,8 +237,8 @@ var nodesjs = new NodesJs({
 
     // background transition options
     backgroundFrom: [0, 0, 0],
-    backgroundTo: [0, 0, 0],
-    backgroundDuration: 4000,
+    backgroundTo: [19, 0, 41],
+    backgroundDuration: 60000,
 
     // the number of particles
     number: window.hasOwnProperty('orientation') ? 30: 100,
