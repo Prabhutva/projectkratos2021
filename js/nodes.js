@@ -196,7 +196,7 @@ var NodesJs = (function (parameters) {
                     var alpha = 0;
 
                     if (d <= 300) {
-                        alpha = 0.3 - ((0.3 * d) / 200);
+                        alpha = 0.2 - ((0.2 * d) / 200);
                     }
 
                     if (alpha == 0) {
@@ -234,16 +234,16 @@ var nodesjs = new NodesJs({
 
     // height
     height: window.innerHeight,
-
+    particleSize: 2,
     // background transition options
     backgroundFrom: [0, 0, 0],
     backgroundTo: [19, 0, 41],
     backgroundDuration: 60000,
-
+    particleColor: [255,255,255,0.2],
     // the number of particles
     number: window.hasOwnProperty('orientation') ? 30: 100,
 
     // animation speed
-    speed: 150
+    speed: 170
     
 });

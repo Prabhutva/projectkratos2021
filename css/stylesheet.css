@@ -132,7 +132,7 @@ h3 {
 
 .sidebar a:hover {
   color: #f1f1f1;
-  font-size: 35px;
+  font-size: 33px;
 }
 
 main .sidebar {
@@ -181,6 +181,20 @@ main .sidebar {
 	/* text-align: center; */
 }
 
+#intro
+{
+  display: flex;
+}
+
+.intro, .sarvid{
+	padding-top: 180px;
+	padding-bottom: 40px;
+}
+
+.intro .container, .sarvid .container {
+	width: 100%;
+	margin: auto;
+}
 
 
 
