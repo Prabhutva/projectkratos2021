@@ -2,7 +2,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  
+  position: relative;
 }
 
 html,
@@ -63,6 +63,7 @@ h6 {
 h2 {
   font-weight: 200;
   margin: 0.4em 0;
+  color: #fff;
 }
 h1 { 
   /* font-size: 4rem;  */
@@ -70,17 +71,20 @@ h1 {
   margin: 0.4em 0;
   color: #fff;
 }
-h2 {
-  color: #fff;
-  /* font-size: 2em; */
-}
 h3 {
   color: #fff;
   /* font-size: 1.8em; */
 }
 
 .title {
-	padding-bottom: 40px;
+  border-radius: 20px;
+	border: none;
+	background: linear-gradient(225deg, #e9351e77, #52219c77);
+	/* font-size:2vh; */
+  padding: 20px 40px;
+  padding-bottom: 40px;
+  /* margin-top: 100px;
+  transition: 0.4s; */
 }
 
 .title p {
@@ -103,7 +107,7 @@ h3 {
 
 .sidebar {
   height: 100%;
-  width: 89px;
+  width: 5%;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -116,7 +120,7 @@ h3 {
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 20px;
+  padding: 8px 0.29vw 8px 1.15vw;
   text-decoration: none;
   font-size: 25px;
   transition: 0.2s;
@@ -126,35 +130,14 @@ h3 {
 }
 
 .sidebar a #navbarlogo { 
-  padding: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 0.6vw;
+  width: 16.1vw;
   display: block;
 }
 
 .sidebar a:hover {
   color: #f1f1f1;
   font-size: 33px;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  visibility: collapse;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  visibility: collapse;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: #444;
 }
 
 main .sidebar {
@@ -170,11 +153,46 @@ main .sidebar {
   vertical-align: middle;
 }
 
+
 .navbar-icons {
+  width: 2.3vw;
+  transition: 0.2s;
   padding-bottom: 3px;
-  margin-left: 5px;
-  margin-right: 35px;
+  margin-left: 0.29vw;
+  margin-right:2vw;
 }
+
+.navbar-icons:hover {
+  width: 3vw;
+  padding-bottom: 3px;
+  margin-left: 0.29vw;
+  margin-right:2vw;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  visibility: collapse;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  visibility: hidden;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
 
 
 #main {
@@ -204,14 +222,14 @@ main .sidebar {
 }
 
 #home .btn {
-	background: linear-gradient(90deg, #e9351e, #52219c);
+	background: linear-gradient(90deg, #e9351e77, #52219c77);
 	border-radius: 10px;
 	border: none;
 	color: #ffffff;
 	font-size:2vh;
 	padding: 20px 40px;
   margin-top: 100px;
-  transition: 0.4s;
+  transition: all 0.4s;
 }
 
 #home .btn:hover {
@@ -221,6 +239,9 @@ main .sidebar {
   border-radius: 15px;
 	transition: all 0.4s ease-in-out;
 }
+
+#kratoslogo{
+transition: margin-left 0.5s;}
 
 #intro
 {
@@ -271,6 +292,38 @@ footer .copyright a {
 	color: #eb5424;
 }
 
+.social-icon {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.social-icon li {
+	list-style: none;
+	display: inline-block;
+}
+
+.social-icon li a {
+	background: #f8f8f8;
+	border-radius: 100%;
+	color: #eb5424;
+	font-size: 32px;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.4s ease-in-out;
+	margin: 0 6px 40px 6px;
+}
+
+.social-icon li a:hover {
+	background: #080808;
+}
+
+
+
 @media screen and (max-width: 450px) {
   .sidebar {
     padding-top: 15px;
@@ -278,6 +331,39 @@ footer .copyright a {
   }
   .sidebar a {
     font-size: 18px;
+  }
+
+  .sidebar a #navbarlogo { 
+    padding: 0px 5vw 0px 5vw;
+    width: 90vw;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+    font-size: 33px;
+  }
+  
+  main .sidebar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .navbar-icons,
+  .icon-text {
+    vertical-align: middle;
+  }
+
+  
+  
+  .navbar-icons {
+    width: 13vw;
+    padding-bottom: 3px;
+    margin-left: 5vw;
+    margin-right: 35px;
   }
 
   .sidebar .closebtn {

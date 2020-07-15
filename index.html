@@ -25,7 +25,7 @@
   <!-- STYLESHEET CSS FILES -->
   <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="css/nivo-lightbox.css">
     <link rel="stylesheet" href="css/nivo_themes/default/default.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
@@ -34,7 +34,6 @@
   <!-- JAVASCRIPT JS FILES -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- <meta name="theme-color" content="#00b3b3"> -->
@@ -55,40 +54,40 @@
 
   <!-- Side Navigation Bar -->
   <!-- TODO: Make it responsive -->
-  <div id="sidenavbar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-    <a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#home"><span></span><img id="navbarlogo" alt="Kratos Logo" src="./img/kratoslogomini.png"
-        width="280px"></span></a>
+  <div id="sidenavbar" class="sidebar" onmouseover="checkToggleSidebar(true)" onmouseout="checkToggleSidebar(false)">
+    <a href="javascript:void(0)" id="close" class="closebtn" onclick="toggleSidebar(false)">&times;</a>
+    <a href="#home"><span></span><img id="navbarlogo" alt="Kratos Logo" src="./img/kratoslogomini.png"></span></a>
     <br>
-    <a href="#"><img class="navbar-icons" width="40dp" src="./img/rover.png" alt="About the Rover"><span
+    <a href="#"><img class="navbar-icons"  src="./img/rover.png" alt="About the Rover"><span
         class="icon-text">The Rover</span></a>
     <br>
-    <a href="#"><img class="navbar-icons" width="40dp" src="./img/competitions.png" alt="competitions"><span
+    <a href="#"><img class="navbar-icons"  src="./img/competitions.png" alt="competitions"><span
         class="icon-text">Competitions</a></span></a>
     <br>
-    <a href="#"><img class="navbar-icons" width="40dp" src="./img/team.png" alt="Our Team"><span
+    <a href="#"><img class="navbar-icons"  src="./img/team.png" alt="Our Team"><span
         class="icon-text">Team</span></a>
     <br>
-    <a href="#"><img class="navbar-icons" width="40dp" src="./img/sponsor.png" alt="Our Sponsors"><span
+    <a href="#"><img class="navbar-icons"  src="./img/sponsor.png" alt="Our Sponsors"><span
         class="icon-text">Sponsors<span></a>
     <br>
-    <a href="#"><img class="navbar-icons" width="40dp" src="./img/gallery.png" alt="Gallery"><span
+    <a href="#"><img class="navbar-icons"  src="./img/gallery.png" alt="Gallery"><span
         class="icon-text">Gallery</span></a>
     <br>
-    <a href="#"><img class="navbar-icons" width="40dp" src="./img/blog.png" alt="Blog"><span
+    <a href="#"><img class="navbar-icons"  src="./img/blog.png" alt="Blog"><span
         class="icon-text">Blog</span></a>
     <br>
-    <a href="#"><img class="navbar-icons" width="40dp" src="./img/contact.png" alt="Contact Us"><span
+    <a href="#"><img class="navbar-icons"  src="./img/contact.png" alt="Contact Us"><span
         class="icon-text">Contact Us</span></a>
     <br>
   </div>
 
   <!-- Background Section -->
-  <section>
+  <section >
     <div id="main" style="position: fixed; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%;">
-      <canvas style="position: absolute; left: 0; top: 0; z-index: 0;" id="nodes"></canvas>
+      <canvas id="nodes"></canvas>
   </section>
-  
+
+
 
 
 
@@ -109,7 +108,7 @@
     <div id="kratoslogo"
       style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 1; ">
       <!-- <img style="width: 30%; float: left; position: absolute; left: 10%; top: 20%" src="./img/kratoslogoresized.png"> -->
-      <button class="openbtn" onclick="openNav()">&#9776;</button>
+      <button class="openbtn" id="openbtn" onclick="toggleSidebar(true)">&#9776;</button>
       <div class="container" style="float: left; position: absolute; margin: 10% 10% 0% 10%; ">
         <div class="row">
           <div class="col-md-6 col-sm-12" >
@@ -161,8 +160,8 @@
    <!-- ALternate -->
    <section id="intro" class="intro">
     <div class="container">
-      <div class="row-full align-items-center" style="align-items: center; text-align: right; vertical-align: middle; display: flex;">
-        <div class="col-md-offset-1 col-md-2 col-sm-offset-4 col-sm-4 title align-self-center">
+      <div class="row row-full align-items-center" style="align-items: center; text-align: right; vertical-align: middle; display: flex;">
+        <div class="col-md-offset-1 col-md-2 col-sm-offset-4 col-sm-4 align-self-center">
           <img style="border-radius: 1px; width: 100%; max-width: 100%; height: auto;" src="./img/terramars.png">
         </div>
         <div class="col-md-offset-1 col-md-7 col-sm-offset-1 col-sm-10 title align-self-center"  >
@@ -196,7 +195,7 @@
             extraterrestrial life. We’re a team of 30 students from diverse backgrounds with a vision, to create
             groundbreaking innovations in the field of space exploration. </p>
         </div>
-        <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-10 title align-self-center">
+        <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-10 align-self-center">
             
               <img style="object-fit: fill; border-radius: 40px;" src="./img/team.jpg">
             
@@ -211,11 +210,11 @@
    <!-- ALternate -->
   <section id="intro" class="intro">
     <div class="container ">
-      <div class="row-full align-items-center" style="align-items: center; text-align: right; vertical-align: middle; display: flex;">
-        <div class="col-md-offset-1 col-md-2 col-sm-offset-4 col-sm-4 title align-self-center">
+      <div class="row row-full align-items-center" style="align-items: center; text-align: right; vertical-align: middle; display: flex;">
+        <div class="col-md-offset-1 col-md-2 col-sm-offset-4 col-sm-4 align-self-center">
           <img style="border-radius: 1px; width: 100%; max-width: 100%; height: auto;" src="./img/ms.png">
         </div>
-        <div class="col-md-offset-0 col-md-2 col-sm-offset-4 col-sm-4 title align-self-center">
+        <div class="col-md-offset-0 col-md-2 col-sm-offset-4 col-sm-4 align-self-center">
           <img style="border-radius: 1px; width: 100%; max-width: 100%; height: auto;" src="./img/urc.png">
         </div>
         <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-10 title align-self-center" >
@@ -234,7 +233,7 @@
   <!-- About IRC Section -->
   <section id="intro" class="intro">
     <div class="container">
-      <div class="row-full align-self-center" style="align-items: center; text-align: left; vertical-align: middle; display: flex;" >
+      <div class="row row-full align-self-center" style="align-items: center; text-align: left; vertical-align: middle; display: flex;" >
         <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-10 title align-self-center">
           <h2>The Indian Rover Challenge</h2>
           <hr>
@@ -249,7 +248,7 @@
             We are now working hard to improve our rover based on our experiences in IRC 2020, and are enthusiastically
             looking forward to be a part of IRC 2021.</p>
         </div>
-        <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-10 title align-self-center">
+        <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-10 align-self-center">
             
           <img style="object-fit: fill; border-radius: 40px;" src="./img/irc.png">
         
@@ -268,18 +267,12 @@
             <h2>URC 2020</h2>
             <hr>
             <h3>Project Kratos - System Acceptance Review</h3>
-          
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 title">
             <div style="position:relative;padding-bottom:56.25%;">
               <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" width="100%"
                 height="100%" loading="lazy" src="https://www.youtube.com/embed/7ka3s3takjY" frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
               </iframe>
             </div>
-            <br>
           </div>
         </div>
       </div>
@@ -289,21 +282,16 @@
   <!-- BITS Logo + Sponsor Section -->
   <section>
 
-    <div class="container">
+    <div class="container" style="margin-bottom: 100px;">
       <div class="row-full">
-        <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-10 title">
-          <h2>The Indian Rover Challenge</h2>
-          <hr>
-          <p>The Indian Rover Challenge is an annual competition held by the Mars Society South Asia. It features a
-            challenge to engage students worldwide in robotics and space exploration. It aims to ignite and encourage
-            the spirit of innovation amongst budding engineers as they set on a quest to build a space exploration
-            rover, using their skills and ideas. The third edition of the Indian Rover Challenge was held during January
-            17-20, 2020, at the Vellore Institute of Technology (VIT) Chennai, Tamil Nadu, India.
-            In our maiden year itself, we are proud to announce that we stood 10th out of 35 participating teams, and
-            were first amongst all newly participating rovers.
-
-            We are now working hard to improve our rover based on our experiences in IRC 2020, and are enthusiastically
-            looking forward to be a part of IRC 2021.</p>
+        <div class="col-md-offset-0 col-md-4 col-sm-offset-4 col-sm-4 align-self-center">
+          <img style="border-radius: 1px; width: 100%; padding: 0px 3vw; max-width: 100%; height: auto;" src="./img/ansys.png">
+        </div>
+        <div class="col-md-offset-0 col-md-4 col-sm-offset-4 col-sm-4 align-self-center">
+          <img style="border-radius: 1px; width: 100%; padding: 0px 3vw; max-width: 100%; height: auto;" src="./img/bits.png">
+        </div>
+        <div class="col-md-offset-0 col-md-4 col-sm-offset-4 col-sm-4 align-self-center">
+          <img style="border-radius: 1px; width: 100%; padding: 0px 3vw; max-width: 100%; height: auto;" src="./img/solidworks.png">
         </div>
       </div>
     </div>
@@ -319,8 +307,7 @@
           <hr>
           <p>Want to know more about us? Feel free to contact us.<br><a href="tel:+918879705469"
               class="fa fa-phone wow bounceIn" data-wow-delay="0.9s"><b>+91 88797 05469</b></a></p>
-        </div>
-        <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 contact-form wow fadeInUp" data-wow-delay="0.9s">
+        
           <form method="post" id="contact-form">
             <input type="text" class="form-control" id="name-field" placeholder="Name" required>
             <input type="email" class="form-control" id="email-field" placeholder="Email" required>
@@ -338,18 +325,18 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-12 col-sm-12">
+        <div class="col-md-12 col-sm-12 title">
           <h2 class="wow fadeIn" data-wow-delay="0.9s">Follow Us</h2>
           <ul class="social-icon">
-            <li><a href="https://www.facebook.com/KratosBITSGoa/" class="fa fa-facebook wow bounceIn"
+            <li><a href="https://www.facebook.com/KratosBITSGoa/" class="fa fa-facebook"
                 data-wow-delay="0.3s"></a></li>
-            <li><a href="https://www.instagram.com/kratosbitsgoa/" class="fa fa-instagram wow bounceIn"
+            <li><a href="https://www.instagram.com/kratosbitsgoa/" class="fa fa-instagram"
                 data-wow-delay="0.6s"></a></li>
-            <li><a href="https://www.linkedin.com/company/kratosbitsgoa/" class="fa fa-linkedin wow bounceIn"
+            <li><a href="https://www.linkedin.com/company/kratosbitsgoa/" class="fa fa-linkedin"
                 data-wow-delay="0.9s"></a></li>
-            <li><a href="mailto:kratosbitsgoa@gmail.com" class="fa fa-envelope wow bounceIn" data-wow-delay="0.9s"></a>
+            <li><a href="mailto:kratosbitsgoa@gmail.com" class="fa fa-envelope" data-wow-delay="0.9s"></a>
             </li>
-            <li><a href="tel:+918879705469" class="fa fa-phone wow bounceIn" data-wow-delay="0.9s"></a></li>
+            <li><a href="tel:+918879705469" class="fa fa-phone" data-wow-delay="0.9s"></a></li>
           </ul>
         </div>
         <div class="col-md-12 col-sm-12 copyright">
@@ -382,11 +369,14 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src=".\js\webpage.js"></script>
   <script src=".\js\nodes.js"></script>
+  <script type="text/javascript">window.onresize=function(){nodesjs.setWidth(window.innerWidth);nodesjs.setHeight(window.innerHeight);};</script>
+  
   <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
 
 </body>
 
