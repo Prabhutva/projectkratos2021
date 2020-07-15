@@ -3,56 +3,20 @@ var bigscreen = true;
 var hover = true;
 resizenavbar();
 function resizenavbar() {
-  if (window.innerWidth > 450) {
+  if ($(window).width() > 450) {
     bigscreen = true;
     hover = true;
     document.getElementById("close").style.visibility = "collapse";
-    document.getElementById("navbar-collapsed").style.visibility = "collapse";
     document.getElementById("openbtn").style.visibility = "collapse";
-    $('#navbar-collapsed').removeClass('navbar-fixed');
-      document.getElementById("toplogo").style.visibility = "collapse";
-      console.log(window.innerWidth +"changed to bigscreen yes" + bigscreen);
   }
   else {
     hover = false;
     bigscreen = false;
-    document.getElementById("navbar-collapsed").style.visibility = "visible";
-    document.getElementById("sidenavbar").style.width = "0px";
-    console.log(window.innerWidth + "changed to bigscreen no" + bigscreen);
   }
-  
+  document.getElementById("openbtn").style.visibility = "visible";
 }
 
-$(document).ready(function() {
-  $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
-      console.log($(window).scrollTop())
-      if(!this.bigscreen)
-      {
-    if ($(window).scrollTop() > window.innerHeight) {
-      $('#navbar-collapsed').addClass('navbar-fixed');
-      document.getElementById("toplogo").style.visibility = "visible";
-    }
-    if ($(window).scrollTop() < window.innerHeight ) {
-      $('#navbar-collapsed').removeClass('navbar-fixed');
-      document.getElementById("toplogo").style.visibility = "collapse";
-    }
-    console.log("bigscreen" + bigscreen);
-  }
-    else
-    {
-      $('#navbar-collapsed').removeClass('navbar-fixed');
-      document.getElementById("toplogo").style.visibility = "collapse";
-      document.getElementById("navbar-collapsed").style.visibility = "collapse";
-    }
-    console.log("bigscreen" + bigscreen);
-  });
-});
-
 window.onresize = resizenavbar;
-window.onorientationchange = resizenavbar;
 
 function checkToggleSidebar(toggle)
 {
@@ -78,10 +42,8 @@ function toggleSidebar(toggle) {
     else if (toggle && bigscreen) {
       console.log("opening sidebar" + bigscreen);
       
-      document.getElementById("sidenavbar").style.width = "22%";
+      document.getElementById("sidenavbar").style.width = "350px";
       document.getElementById("kratoslogo").style.marginLeft = "300px";
-      document.getElementById("close").style.visibility = "collapse";
-      document.getElementById("openbtn").style.visibility = "collapse";
       this.mini = false;
 
     } else if (bigscreen) {
@@ -89,8 +51,6 @@ function toggleSidebar(toggle) {
       
       document.getElementById("sidenavbar").style.width = "5%";
       document.getElementById("kratoslogo").style.marginLeft = "0px";
-      document.getElementById("close").style.visibility = "collapse";
-      document.getElementById("openbtn").style.visibility = "collapse";
       this.mini = true;
 
     }

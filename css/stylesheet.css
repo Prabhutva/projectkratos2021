@@ -192,6 +192,28 @@ main .sidebar {
   background-color: #444;
 }
 
+ .navbar-fixed {
+  top: 0;
+  background: linear-gradient(225deg, #e9351e, #52219c);
+  z-index: 9;
+  vertical-align: middle;
+  position: fixed;
+  width: 100%;
+  transition: all 0.5s;
+} 
+
+#toplogo
+{
+  visibility: collapse;
+}
+
+/* #nav_bar {
+	border: 0;
+
+	border-radius: 0px;
+	margin-bottom: 0;
+    height: 5vh;
+}  */
 
 
 
