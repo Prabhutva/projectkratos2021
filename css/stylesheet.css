@@ -135,6 +135,28 @@ h3 {
   font-size: 33px;
 }
 
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  visibility: collapse;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  visibility: collapse;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
 main .sidebar {
   position: absolute;
   top: 0;
@@ -179,6 +201,25 @@ main .sidebar {
 	/* align-items: center; */
 	height: 100vh;
 	/* text-align: center; */
+}
+
+#home .btn {
+	background: linear-gradient(90deg, #e9351e, #52219c);
+	border-radius: 10px;
+	border: none;
+	color: #ffffff;
+	font-size:2vh;
+	padding: 20px 40px;
+  margin-top: 100px;
+  transition: 0.4s;
+}
+
+#home .btn:hover {
+	background: linear-gradient(90deg, #e9351e, #52219c);
+  color: #ffffff;
+  font-size: 3vh;
+  border-radius: 15px;
+	transition: all 0.4s ease-in-out;
 }
 
 #intro
@@ -230,13 +271,38 @@ footer .copyright a {
 	color: #eb5424;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 450px) {
   .sidebar {
     padding-top: 15px;
+    visibility: hidden;
   }
   .sidebar a {
     font-size: 18px;
   }
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    visibility: collapse;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    visibility: visible;
+    background: transparent;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+
 }
 
 

@@ -1,17 +1,40 @@
 var mini = true;
+var bigscreen = true;
+window.onresize = resizenavbar;
+
+function resizenavbar(){
+if($(window).width() > 450)
+{bigscreen = true;}
+else
+{bigscreen = false;}
+}
+
 
 function toggleSidebar() {
-  if (mini) {
+  if (mini&&bigscreen) {
     console.log("opening sidebar");
     document.getElementById("sidenavbar").style.width = "350px";
     //document.getElementById("main").style.marginLeft = "300px";
     this.mini = false;
-  } else {
+  } else if(bigscreen) {
     console.log("closing sidebar");
     document.getElementById("sidenavbar").style.width = "89px";
     //document.getElementById("main").style.marginLeft = "89px";
     this.mini = true;
   }
+}
+
+function openNav() {
+  document.getElementById("sidenavbar").style.visibility = "visible";
+  document.getElementById("close").style.visibility = "visible";
+  document.getElementById("sidenavbar").style.width = "100%";
+  //document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("sidenavbar").style.width = "0";
+  //document.getElementById("main").style.marginLeft = "0";
 }
 
 var TxtRotate = function(el, toRotate, period) {
