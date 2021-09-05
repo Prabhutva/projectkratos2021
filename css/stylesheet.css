@@ -106,15 +106,10 @@ h3 {
 
 
 .sidebar {
-  height: 100%;
-  width: 5%;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
+  
   background-image: linear-gradient(0deg, #e9351e, #52219c);
   transition: 0.5s;
-  overflow-x: hidden;
+
   padding-top: 30px;
   white-space: nowrap;
 }
@@ -129,7 +124,7 @@ h3 {
   display: block;
 }
 
-.sidebar a #navbarlogo { 
+#navbarlogo { 
   padding: 0px 0px 0px 0.6vw;
   width: 16.1vw;
   display: block;
@@ -195,7 +190,7 @@ main .sidebar {
  .navbar-fixed {
   top: 0;
   background: linear-gradient(225deg, #e9351e, #52219c);
-  z-index: 9;
+
   vertical-align: middle;
   position: fixed;
   width: 100%;
@@ -234,7 +229,7 @@ main .sidebar {
 	display: -webkit-flex;
 	display: -ms-flexbox;
   display: flex;
-  z-index: 1;
+
 	-webkit-box-align: center;
 	/* -webkit-align-items: center; */
 	-ms-flex-align: center;
@@ -355,7 +350,7 @@ footer .copyright a {
     font-size: 18px;
   }
 
-  .sidebar a #navbarlogo { 
+#navbarlogo { 
     padding: 0px 5vw 0px 5vw;
     width: 90vw;
     display: block;
