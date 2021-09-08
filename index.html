@@ -33,16 +33,17 @@
     />
 
     <!-- STYLESHEET CSS FILES -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    
-    <link rel="stylesheet" href="css/nivo-lightbox.css">
-    <link rel="stylesheet" href="css/nivo_themes/default/default.css">
-    <link rel="stylesheet" href="css/templatemo-style.css">
+
+    <link rel="stylesheet" href="css/animate.min.css" />
+
+    <link rel="stylesheet" href="css/nivo-lightbox.css" />
+    <link rel="stylesheet" href="css/nivo_themes/default/default.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
     <script src="../ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="../cdn.rawgit.com/skipser/youtube-autoresize/master/youtube-autoresizer.js"></script> -->
+    <script src="../cdn.rawgit.com/skipser/youtube-autoresize/master/youtube-autoresizer.js"></script>
+    -->
     <!-- JAVASCRIPT JS FILES -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -57,95 +58,112 @@
 
     <!-- <meta name="theme-color" content="#00b3b3"> -->
   </head>
-  <style>
-    /* override Bootstrap's container */
-    /* .container
-  {
-      padding-right:0;
-      padding-left:0;
-      margin-right:0;
-      margin-left:0
-   } */
-  </style>
+
 
   <body>
     <!-- Side Navigation Bar -->
     <!-- TODO: Make it responsive -->
-    <div
-      id="sidenavbar"
-      class="sidebar"
-      onmouseover="checkToggleSidebar(true)"
-      onmouseout="checkToggleSidebar(false)"
+    <nav
+      class="navbar navbar-dark" id="navbar"
+      style="
+        position: fixed;
+        top: 0;
+        height: 10vh;
+        z-index: 2;
+        width: 100%;
+        background-color: transparent;
+        justify-content: center;
+        padding: 0;
+      "
     >
-      <a
-        href="javascript:void(0)"
-        id="close"
-        class="closebtn"
-        onclick="toggleSidebar(false)"
-        >&times;</a
+      <button
+      style="position: absolute; left: 0;"
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-      <a href="#home"
-        ><span
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a id="toplog" href="#home" class="navbar-brand" style="height: 100%;"
+        ><span style="height: 100%;"
           ><img
             id="navbarlogo"
+            style="height: 80%;"
             alt="Kratos Logo"
             src="./img/kratoslogomini.png" /></span
       ></a>
-      <br />
-      <a href="#"
-        ><img
-          class="navbar-icons"
-          src="./img/rover.png"
-          alt="About the Rover"
-        /><span class="icon-text">The Rover</span></a
-      >
-      <br />
-      <a href="#"
-        ><img
-          class="navbar-icons"
-          src="./img/competitions.png"
-          alt="competitions"
-        /><span class="icon-text">Competitions</span></a
-      >
-      <br />
-      <a href="#"
-        ><img class="navbar-icons" src="./img/team.png" alt="Our Team" /><span
-          class="icon-text"
-          >Team</span
-        ></a
-      >
-      <br />
-      <a href="#"
-        ><img
-          class="navbar-icons"
-          src="./img/sponsor.png"
-          alt="Our Sponsors"
-        /><span class="icon-text">Sponsors</span></a
-      >
-      <br />
-      <a href="#"
-        ><img class="navbar-icons" src="./img/gallery.png" alt="Gallery" /><span
-          class="icon-text"
-          >Gallery</span
-        ></a
-      >
-      <br />
-      <a href="#"
-        ><img class="navbar-icons" src="./img/blog.png" alt="Blog" /><span
-          class="icon-text"
-          >Blog</span
-        ></a
-      >
-      <br />
-      <a href="#"
-        ><img
-          class="navbar-icons"
-          src="./img/contact.png"
-          alt="Contact Us"
-        /><span class="icon-text">Contact Us</span></a
-      >
-      <br />
-    </div>
+
+      <div class="collapse navbar-collapse sidebar" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a href="#"
+              ><img
+                class="navbar-icons"
+                src="./img/rover.png"
+                alt="About the Rover"
+              /><span class="icon-text">The Rover</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#"
+              ><img
+                class="navbar-icons"
+                src="./img/competitions.png"
+                alt="competitions"
+              /><span class="icon-text">Competitions</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="navbar-icons"
+                src="./img/team.png"
+                alt="Our Team"
+              /><span class="icon-text">Team</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="navbar-icons"
+                src="./img/sponsor.png"
+                alt="Our Sponsors"
+              /><span class="icon-text">Sponsors</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="navbar-icons"
+                src="./img/gallery.png"
+                alt="Gallery"
+              /><span class="icon-text">Gallery</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img class="navbar-icons" src="./img/blog.png" alt="Blog" /><span
+                class="icon-text"
+                >Blog</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="navbar-icons"
+                src="./img/contact.png"
+                alt="Contact Us"
+              /><span class="icon-text">Contact Us</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- Background Section -->
     <section>
@@ -175,7 +193,7 @@
           overflow: hidden;
           height: 100vh;
           width: 100vw;
-          z-index: 1;
+          z-index: 0;
         "
       >
         <img
@@ -200,7 +218,7 @@
           overflow: hidden;
           width: 100%;
           height: 100%;
-          z-index: 1;
+          z-index: 0;
         "
       >
         <!-- <img style="width: 30%; float: left; position: absolute; left: 10%; top: 20%" src="./img/kratoslogoresized.png"> -->
@@ -256,33 +274,18 @@
       </div>
     </section>
 
-    <div
-      id="navbar-collapsed"
-      style="
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        overflow: hidden;
-        width: 100%;
-        height: auto;
-        z-index: 9;
-      "
-    >
-      <!-- <img style="width: 30%; float: left; position: absolute; left: 10%; top: 20%" src="./img/kratoslogoresized.png"> -->
-      <button class="openbtn" id="openbtn" onclick="toggleSidebar(true)">
-        &#9776;
-      </button>
-      <img
-        id="toplogo"
-        src="./img/kratoslogoresized.png"
-        alt="Kratos"
-        height="60vh"
-      />
-    </div>
-
     <!-- Our Mission Section -->
     <!-- ALternate -->
-    <section id="intro" class="intro offset-1">
+    <section
+      id="intro"
+      class="intro"
+      style="
+        position: relative;
+        max-width: 1500px;
+        left: 50%;
+        transform: translateX(-50%);
+      "
+    >
       <div
         class="row align-items-center"
         style="align-items: center; text-align: right; vertical-align: middle"
@@ -394,7 +397,7 @@
         />
 
         <img
-          class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"
+          class="col-3 col-sm-3 col-md-2 col-lg-2 col-xl-2"
           style="border-radius: 1px; height: auto"
           src="./img/urc.png"
         />
@@ -479,7 +482,9 @@
       >
         <div
           class="
-            col-4 offset-4
+            col-md-6
+            offset-md-3
+            col-11
             order-md-0 order-lg-0 order-1 order-xl-0
             title
             align-self-center
@@ -679,7 +684,7 @@
     </footer>
 
     <!-- <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
     <script src="js/nivo-lightbox.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/jquery.sticky.js"></script>
@@ -693,8 +698,7 @@
       type="text/css"
     />
     <link rel="stylesheet" type="text/css" href=".\css\stylesheet.css" />
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-    <script src=".\js\webpage.js"></script>
+
     <script src=".\js\nodes.js"></script>
     <script type="text/javascript">
       window.onresize = function () {
@@ -702,11 +706,26 @@
         nodesjs.setHeight(window.innerHeight);
       };
     </script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+<script src="./js/webpage.js"></script>
     <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/font-awesome.min.css" />
   </body>
