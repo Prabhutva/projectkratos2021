@@ -124,12 +124,6 @@ h3 {
   display: block;
 }
 
-#navbarlogo { 
-  padding: 0px 0px 0px 0.6vw;
-  width: 16.1vw;
-  display: block;
-}
-
 .sidebar a:hover {
   color: #f1f1f1;
   font-size: 33px;
@@ -350,11 +344,6 @@ footer .copyright a {
     font-size: 18px;
   }
 
-#navbarlogo { 
-    padding: 0px 5vw 0px 5vw;
-    width: 90vw;
-    display: block;
-  }
   
   .sidebar a:hover {
     color: #f1f1f1;
